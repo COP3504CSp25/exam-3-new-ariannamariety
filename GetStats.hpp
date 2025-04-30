@@ -17,14 +17,15 @@ public:
         //write your function here!
         int min = 0;
         int max = 0;
-        int total = 0;
-        int* returnVals[3] = {&min, &max, &total};
+        int avg = 0;
+        int* returnVals[3] = {&min, &max, &avg};
 
         if (head == nullptr) {
             return returnVals[0];
         }
         min = head->data;
         max = head->data;
+        int total = 0;
         int count = 0;
         Node* current = head;
         while (current != nullptr) {
@@ -38,9 +39,10 @@ public:
             count++;
             current = current->next;
         }
+        avg = total/count;
         *returnVals[0] = min;
         *returnVals[1] = max;
-        *returnVals[2] = total/count;
+        *returnVals[2] = avg;
 
         return returnVals[0];
     }
