@@ -15,16 +15,14 @@ public:
 
     int* getStats() const{
         //write your function here!
-        int* returnVals[3];
-        *returnVals[0] = 0;
-        *returnVals[1] = 0;
-        *returnVals[2] = 0;
-        if (head == nullptr) {
-            return returnVals[0];
-        }
         int min = head->data;
         int max = head->data;
         int total = 0;
+        int* returnVals[3] = {&min, &max, &total};
+
+        if (head == nullptr) {
+            return returnVals[0];
+        }
         int count = 0;
         Node* current = head;
         while (current != nullptr) {
