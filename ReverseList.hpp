@@ -20,7 +20,7 @@ public:
         Node* current = head;
         while (current!= nullptr) {
             list.addHead(current->data);
-            current->next;
+            current = current->next;
         }
         return list;
     }
