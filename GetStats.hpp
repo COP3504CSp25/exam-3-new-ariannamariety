@@ -25,7 +25,7 @@ public:
         }
         min = head->data;
         max = head->data;
-        int total = 0;
+        double total = 0;
         int count = 0;
         Node* current = head;
         while (current != nullptr) {
@@ -39,7 +39,7 @@ public:
             count++;
             current = current->next;
         }
-        avg = total/count;
+        avg = static_cast<int>(total/count);
         *returnVals[0] = min;
         *returnVals[1] = max;
         *returnVals[2] = avg;
