@@ -17,11 +17,6 @@ public:
     LinkedList reverseList() const {
         // implement your function here!
         LinkedList list;
-        if (head == nullptr) return;
-        if (head->next == nullptr) {
-            list.addHead(head->data);
-            return list;
-        }
         Node* current = head;
         while (current!= nullptr) {
             list.addHead(current->data);

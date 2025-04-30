@@ -15,7 +15,7 @@ public:
 
     int* getStats() const{
         //write your function here!
-        int* returnVals[3] = {0,0,0};
+        int* returnVals[] = {0,0,0};
         if (head == nullptr) {
             return returnVals[0];
         }
